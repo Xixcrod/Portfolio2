@@ -1,0 +1,72 @@
+{
+  "perfil": {
+    "nombre": "Carlos Díaz",
+    "titulo": "Desarrollador Web / Ingeniero de Sistemas",
+    "bio": "Soy un desarrollador web apasionado por crear soluciones digitales atractivas y funcionales.",
+    "foto": "images/perfil.png",
+    "email": "carlosdiaz200418@ejemplo.com",
+    "telefono": "+58 414-0741823",
+    "ubicacion": "Punto Fijo, Falcón, Venezuela",
+    "github": "https://github.com/tu_usuario",
+    "linkedin": "https://linkedin.com/in/tu_usuario",
+    "twitter": "https://twitter.com/tu_usuario"
+  },
+  "proyectos": [
+    {
+      "titulo": "PRISMA",
+      "descripcion": "Plataforma de clases virtuales con gestión de cursos y lecciones.",
+      "fecha": "2026",
+      "imagenes": [
+        "images/proyectos/prisma-1.jpg",
+        "images/proyectos/prisma-2.png"
+      ],
+      "tecnologias": [
+        { "nombre": "Django", "icono": "images/icons/django.png" },
+        { "nombre": "JavaScript", "icono": "images/icons/javascript.png" }
+      ],
+      "url_proyecto": "https://ejemplo.com",
+      "url_repositorio": "https://github.com/tu_usuario/prisma"
+    }
+  ],
+  "skills": [
+    {
+      "nombre": "Python",
+      "nivel": "Avanzado",
+      "icono": "images/icons/python.png"
+    },
+    {
+      "nombre": "JavaScript",
+      "nivel": "Intermedio",
+      "icono": "images/icons/javascript.png"
+    }
+  ],
+  "habilidades_blandas": [
+    {
+      "nombre": "Trabajo en Equipo",
+      "descripcion": "Colaboración efectiva, comunicación transparente y facilidad para integrarse en equipos multidisciplinarios."
+    },
+    {
+      "nombre": "Resolución de Problemas",
+      "descripcion": "Pensamiento analítico y metodológico para identificar fallas y diseñar soluciones eficientes."
+    },
+    {
+      "nombre": "Atención y Soporte al Usuario",
+      "descripcion": "Empatía y habilidad para transmitir conceptos técnicos de forma clara a usuarios finales y clientes."
+    },
+    {
+      "nombre": "Adaptabilidad y Aprendizaje Continuo",
+      "descripcion": "Capacidad de asimilar rápidamente nuevas tecnologías, metodologías y entornos de trabajo exigentes."
+    }
+  ],
+  
+  "educacion": [
+    {
+      "titulo": "Ingeniería de Sistemas",
+      "institucion": "UNEFM",
+      "fecha_inicio": "2020",
+      "fecha_fin": "2025",
+      "descripcion": "Formación integral en desarrollo de software, bases de datos y arquitectura de sistemas.",
+      "certificado_pdf": "docs/titulo.pdf"
+    }
+  ]
+}

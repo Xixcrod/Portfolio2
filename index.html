@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <!-- Configuración básica del documento HTML. -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" type="image/x-icon" href="images/portfolio-ico.png">
+    <title>Portafolio</title>
+
+    <link rel="shortcut icon" href="#">
+
+    <!-- Css para las distintas secciones -->
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" type="text/css" href="css/base.css">
+    <link rel="stylesheet" type="text/css" href="css/navbar.css">
+</head>
+
+<body>
+    <div class="cuerpo-base">
+        <!-- INICIO DEL NAVBAR -->
+        <nav class="navbar">
+            <!-- Botón Hamburguesa -->
+            <button class="hamburger" aria-label="Abrir menú">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <div class="navbar-links">
+                <a href="#about-me">Acerca de Mí</a>
+                <a href="#projects">Proyectos</a>
+                <a href="#skills">Habilidades Técnicas</a>
+                <a href="#soft-skills">Habilidades Blandas</a>
+                <a href="#education">Certificados</a>
+                <a href="#contact">Contacto</a>
+            </div>
+        </nav>
+
+        <!-- SECCIÓN SOBRE MÍ -->
+        <div class="perfil-card" id="about-me">
+            <div class="perfil-content">
+                <h2>Hola, soy</h2>
+                <h3>Desarrollador Web / Ingeniero de Sistemas</h3>
+            </div>
+            <div class="perfil-image">
+                <img src="#" alt="Foto de perfil">
+            </div>
+        </div>
+
+        <!-- SECCIÓN PROYECTOS -->
+        <div class="projects-section" id="projects">
+            <h2>Proyectos</h2>
+            <div class="projects-grid" id="projects-container">
+
+                <!-- Tarjeta de Proyecto (Ejemplo de estructura) -->
+                <div class="project-card">
+                    <div class="project-image-container">
+                        <div class="slider-inner">
+                            <img src="#" alt="Imagen del proyecto" class="slide-image">
+                            <img src="#" alt="Imagen del proyecto" class="slide-image">
+                        </div>
+                        <button class="prev-slide">&#10094;</button> 
+                        <button class="next-slide">&#10095;</button>
+                        <div class="slider-indicators"></div>
+                    </div>
+                    <div class="project-details">
+                        <h3>Nombre del Proyecto</h3>
+                        <p class="project-description">Descripción detallada del proyecto. - 2026</p>
+
+                        <div class="project-technologies">
+                            <div class="technology-item">
+                                <img src="#" alt="Python" title="Python">
+                            </div>
+                            <div class="technology-item">
+                                <img src="#" alt="JavaScript" title="JavaScript">
+                            </div>
+                        </div>
+
+                        <div class="project-buttons">
+                            <a href="https://ejemplo.com" class="button primary-button" target="_blank">Ver Proyecto</a>
+                            <a href="https://github.com/tu_usuario/repo" class="button secondary-button" target="_blank">Ver Código</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Script del carrusel -->
+        <script src="js/carrusel_imagenes.js"></script>
+
+        <!-- SECCIÓN HABILIDADES TÉCNICAS -->
+        <div class="skills-section" id="skills">
+            <h2>Habilidades técnicas</h2>
+
+            <div class="skills-grid" id="skills-container">
+                <div class="skill-card">
+                    <div class="skill-icon-container">
+                        <img src="#" alt="Icono de Python" class="skill-icon">
+                    </div>
+                    <h3 class="skill-title">Python</h3>
+                    <p class="skill-nivel">Avanzado</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon-container">
+                        <img src="#" alt="Icono de JavaScript" class="skill-icon">
+                    </div>
+                    <h3 class="skill-title">JavaScript</h3>
+                    <p class="skill-nivel">Intermedio</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECCIÓN HABILIDADES BLANDAS -->
+        <div class="soft-skills-section" id="soft-skills">
+            <h2>Habilidades Blandas</h2>
+
+            <div class="soft-skills-grid" id="soft-skills-container">
+                <div class="soft-skill-card">
+                    <h3 class="soft-skill-title">Trabajo en Equipo</h3>
+                    <p class="soft-skill-description">Colaboración efectiva, comunicación transparente y facilidad para integrarse en equipos multidisciplinarios.</p>
+                </div>
+                <div class="soft-skill-card">
+                    <h3 class="soft-skill-title">Resolución de Problemas</h3>
+                    <p class="soft-skill-description">Pensamiento analítico y metodológico para identificar fallas y diseñar soluciones eficientes.</p>
+                </div>
+                <div class="soft-skill-card">
+                    <h3 class="soft-skill-title">Atención y Soporte al Usuario</h3>
+                    <p class="soft-skill-description">Empatía y habilidad para transmitir conceptos técnicos de forma clara a usuarios finales y clientes.</p>
+                </div>
+                <div class="soft-skill-card">
+                    <h3 class="soft-skill-title">Adaptabilidad y Aprendizaje Continuo</h3>
+                    <p class="soft-skill-description">Capacidad de asimilar rápidamente nuevas tecnologías, metodologías y entornos de trabajo exigentes.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECCIÓN CERTIFICADOS / EDUCACIÓN -->
+        <div class="educacion-section" id="education">
+            <h2>Certificados</h2>
+            <div id="education-container">
+                <div class="educacion-card">
+                    <h3>Título del Certificado</h3>
+                    <p>Institución Educativa - 2024 a 2025</p>
+                    <p>Descripción sobre los aprendizajes o conocimientos clave adquiridos.</p>
+                    <a href="docs/certificado.pdf" class="button primary-button" target="_blank">Ver Certificado</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- FOOTER / CONTACTO -->
+        <footer class="main-footer" id="contact">
+            <!-- El contenido se renderizará automáticamente desde JavaScript usando data.json -->
+        </footer>
+
+        <!-- Lógica del carrusel (define initCarrusel) -->
+        <script src="js/carrusel_imagenes.js"></script>
+
+        <!-- Carga del JS de datos -->
+        <script src="js/hamburger_menu.js"></script>
+        <script src="js/main.js"></script>
+    </div>
+</body>
+
+</html>

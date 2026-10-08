@@ -1,0 +1,34 @@
+/* 1. Reset global y box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 2. Desplazamiento suave para la navegación por IDs */
+html {
+    scroll-behavior: smooth;
+}
+
+/* 3. Estilos base del cuerpo y contenedor principal */
+body, 
+.cuerpo-base {
+    min-height: 100vh;
+    width: 100%;
+    background: linear-gradient(to bottom, #2D0140, #00010D);
+    color: #ffffff;
+    font-family: 'Poppins', system-ui, -apple-system, sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden; /* Evita el scroll horizontal no deseado */
+}
+
+/* 4. Reset básico de enlaces e imágenes */
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}

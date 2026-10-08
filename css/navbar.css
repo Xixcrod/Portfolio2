@@ -1,0 +1,248 @@
+/* ==========================================
+   BARRA DE NAVEGACIÓN MEJORADA (GLASS + NEON)
+   ========================================== */
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    
+    width: 90%;
+    max-width: 880px;
+    padding: 10px 24px;
+    
+    /* Fondo Glassmorphic obscuro con cápsula flotante */
+    background: rgba(21, 22, 33, 0.65);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-radius: 50px; /* Forma de cápsula ultramoderna */
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    
+    /* Sombra de profundidad + brillo de bisel superior estilo cristal */
+    box-shadow: 
+        0 10px 30px rgba(0, 0, 0, 0.4),
+        inset 0 1px 1px rgba(255, 255, 255, 0.15);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Brillo neón sutil en el borde al pasar el cursor sobre la navbar */
+.navbar:hover {
+    border-color: rgba(0, 255, 247, 0.3);
+    box-shadow: 
+        0 10px 35px rgba(0, 0, 0, 0.5),
+        0 0 18px rgba(0, 255, 247, 0.12),
+        inset 0 1px 1px rgba(255, 255, 255, 0.2);
+}
+
+/* Contenedor de enlaces */
+.navbar-links {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+/* Enlaces con capsulita flotante y línea neón animada */
+.navbar-links a {
+    position: relative;
+    color: #c8c8e0;
+    text-decoration: none;
+    font-size: 0.92rem;
+    font-weight: 500;
+    padding: 8px 16px;
+    border-radius: 20px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+/* Fondo translúcido sutil en hover */
+.navbar-links a:hover {
+    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.08);
+}
+
+/* Indicador neón animado debajo de cada texto */
+.navbar-links a::after {
+    content: '';
+    position: absolute;
+    bottom: 3px;
+    left: 50%;
+    transform: translateX(-50%) scaleX(0);
+    width: 50%;
+    height: 2px;
+    background: linear-gradient(90deg, #00fff7, #ff00ee);
+    border-radius: 2px;
+    box-shadow: 0 0 8px #ff00ee;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.navbar-links a:hover::after {
+    transform: translateX(-50%) scaleX(1);
+}
+
+/* ==========================================
+   ESTILOS DEL BOTÓN HAMBURGUESA (Escritorio)
+========================================== */
+.hamburger {
+    display: none; /* Oculto en pantallas grandes */
+    cursor: pointer;
+    border: none;
+    background: transparent;
+    width: 28px;
+    height: 22px;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 1001; /* Asegura que esté por encima del menú */
+}
+
+.hamburger span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background: #c8c8e0;
+    border-radius: 3px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 0 5px rgba(0, 255, 247, 0.2);
+}
+
+/* Animación del botón a una "X" con colores neón */
+.hamburger.active span:nth-child(1) {
+    transform: translateY(9.5px) rotate(45deg);
+    background: #00fff7;
+    box-shadow: 0 0 8px #00fff7;
+}
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+    transform: translateX(-15px);
+}
+.hamburger.active span:nth-child(3) {
+    transform: translateY(-9.5px) rotate(-45deg);
+    background: #ff00ee;
+    box-shadow: 0 0 8px #ff00ee;
+}
+
+/* Responsividad para pantallas pequeñas */
+@media (max-width: 768px) {
+    .navbar {
+        width: 92%;
+        top: 15px;
+        padding: 8px 12px;
+        border-radius: 24px;
+    }
+
+    .navbar-links {
+        justify-content: center;
+        gap: 4px 8px;
+    }
+
+    .navbar-links a {
+        font-size: 0.85rem;
+        padding: 6px 10px;
+    }
+}
+
+/* ==========================================
+   RESPONSIVIDAD (MENÚ HAMBURGUESA FLOTANTE)
+   ========================================== */
+@media (max-width: 768px) {
+    /* 1. Hacemos la barra principal invisible para que no ocupe espacio visual */
+    .navbar {
+        background: transparent;
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+        border: none;
+        box-shadow: none;
+        width: 100%;
+        padding: 15px 5%; /* Ajusta la separación lateral */
+        justify-content: flex-end; /* Alinea el botón a la derecha */
+        pointer-events: none; /* Permite hacer clic a los elementos que estén detrás del espacio vacío */
+    }
+
+    /* Cancelamos el hover de la barra para evitar bordes fantasma */
+    .navbar:hover {
+        border-color: transparent;
+        box-shadow: none;
+    }
+
+    /* 2. Trasladamos el estilo Glassmorphic y Neón únicamente al botón */
+    .hamburger {
+        display: flex;
+        pointer-events: auto; /* Reactivamos el clic para el botón */
+        
+        background: rgba(21, 22, 33, 0.65);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        box-shadow: 
+            0 10px 30px rgba(0, 0, 0, 0.4),
+            inset 0 1px 1px rgba(255, 255, 255, 0.15);
+        
+        width: 50px;
+        height: 50px;
+        border-radius: 14px; /* Forma de botón cuadrado redondeado */
+        padding: 14px 12px;
+        transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    /* Efecto neón al tocar el botón */
+    .hamburger:hover, .hamburger:active {
+        border-color: rgba(0, 255, 247, 0.3);
+        box-shadow: 
+            0 8px 25px rgba(0, 0, 0, 0.5),
+            0 0 15px rgba(0, 255, 247, 0.15),
+            inset 0 1px 1px rgba(255, 255, 255, 0.2);
+    }
+
+    /* 3. Ajustamos el menú desplegable para que se posicione respecto a la pantalla */
+    .navbar-links {
+        position: fixed;
+        top: 80px; 
+        left: 5%;
+        width: 90%;
+        background: rgba(21, 22, 33, 0.95);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border-radius: 24px;
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6), inset 0 1px 1px rgba(255, 255, 255, 0.1);
+        
+        flex-direction: column;
+        padding: 20px 0;
+        gap: 15px;
+        
+        /* Oculto por defecto */
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-15px);
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        pointer-events: auto; /* Reactivamos el clic para los enlaces */
+    }
+
+    .navbar-links.active {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+
+    .navbar-links a {
+        font-size: 1rem;
+        padding: 12px 20px;
+        width: 80%;
+        text-align: center;
+        background-color: transparent;
+    }
+
+    .navbar-links a:hover {
+        background-color: rgba(255, 255, 255, 0.05);
+    }
+
+    .navbar-links a::after {
+        width: 40%;
+        bottom: 5px;
+    }
+}
