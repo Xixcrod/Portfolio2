@@ -1,31 +1,76 @@
 {
   "perfil": {
     "nombre": "Carlos Díaz",
-    "titulo": "Desarrollador Web / Ingeniero de Sistemas",
-    "bio": "Soy un desarrollador web apasionado por crear soluciones digitales atractivas y funcionales.",
-    "foto": "images/perfil.png",
-    "email": "carlosdiaz200418@ejemplo.com",
+    "titulo": "Ingeniero de sistemas de 22 años (a la espera de título universitario), caracterizado por una actitud de trabajo organizada y enfocado en la resolución práctica de problemas, con habilidades en desarrollo web y programación, buscando oportunidades para aplicar mis conocimientos y contribuir al éxito de proyectos innovadores. Mi objetivo es crecer profesionalmente y seguir aprendiendo en el campo de la tecnología, aportando soluciones efectivas y creativas.",
+    "bio": "Soy un desarrollador apasionado por crear soluciones digitales atractivas y funcionales.",
+    "foto": "images/perfil.jpeg",
+    "email": "carlosdiaz200418@gmail.com",
     "telefono": "+58 414-0741823",
     "ubicacion": "Punto Fijo, Falcón, Venezuela",
-    "github": "https://github.com/tu_usuario",
-    "linkedin": "https://linkedin.com/in/tu_usuario",
-    "twitter": "https://twitter.com/tu_usuario"
+    "github": "https://github.com/Xixcrod",
+    "linkedin": "https://www.linkedin.com/in/carlos-diaz-m%C3%A9ndez-090160330",
+    "twitter": ""
   },
   "proyectos": [
     {
-      "titulo": "PRISMA",
-      "descripcion": "Plataforma de clases virtuales con gestión de cursos y lecciones.",
-      "fecha": "2026",
+      "titulo": "Registro de Notas",
+      "descripcion": "Sistema de gestión administrativa basado en la modalidad de una institución educativa de bachillerato, con funcionalidades para gestionar notas, matrículas, pensums, periodos y estudiantes por parte del personal administrativo generando incluso excel de notas. No cuenta con diseño responsivo. ",
+      "fecha": "2022",
+      "credenciales": [
+        {
+        "usuario": "Invitado",
+        "password": "Invitado_liceo123"
+      }
+      ],
       "imagenes": [
-        "images/proyectos/prisma-1.jpg",
-        "images/proyectos/prisma-2.png"
+        "images/proyectos/notas1.png",
+        "images/proyectos/notas2.png",
+        "images/proyectos/notas3.png",
+        "images/proyectos/notas4.png",
+        "images/proyectos/notas5.png"
       ],
       "tecnologias": [
         { "nombre": "Django", "icono": "images/icons/django.png" },
-        { "nombre": "JavaScript", "icono": "images/icons/javascript.png" }
+        { "nombre": "Python", "icono": "images/icons/python.png" },
+        { "nombre": "JavaScript", "icono": "images/icons/javascript.png" },
+        { "nombre": "SQLite", "icono": "images/icons/lite.png" },
+        { "nombre": "Django", "icono": "images/icons/Boopstrap.png" }
       ],
-      "url_proyecto": "https://ejemplo.com",
-      "url_repositorio": "https://github.com/tu_usuario/prisma"
+      "url_proyecto": "https://registro-de-notas.onrender.com",
+      "url_repositorio": "https://github.com/Carlos-Romero6/Registro-de-notas"
+    },
+    {
+      "titulo": "Prisma",
+      "descripcion": "Sistema de clases virtuales para profesores y estudiantes, basado en la modalidad de trabajo de una institución universitaria contando con 3 tipos de roles (adminstrador, profesores y estudiantes), con funcionalidades para subir temas, videos, gestionar estudiantes por cursos de profesores, solicitudes de inscripción, visualizar videos, etc. No cuenta con diseño responsivo.",
+      "fecha": "2025",
+      "credenciales": [
+      {
+        "usuario": "22222222",
+        "password": "profesor12345"
+      },
+      {
+        "usuario": "33333333",
+        "password": "estudiante12345"
+      }
+      ],
+      "imagenes": [
+        "images/proyectos/prisma1.png",
+        "images/proyectos/prisma2.png",
+        "images/proyectos/prisma3.png",
+        "images/proyectos/prisma4.png",
+        "images/proyectos/prisma5.png",
+        "images/proyectos/prisma6.png",
+        "images/proyectos/prisma7.png"
+      ],
+      "tecnologias": [
+        { "nombre": "Django", "icono": "images/icons/django.png" },
+        { "nombre": "Python", "icono": "images/icons/python.png" },
+        { "nombre": "JavaScript", "icono": "images/icons/javascript.png" },
+        { "nombre": "Postgresql", "icono": "images/icons/postgre.png" },
+        { "nombre": "Django", "icono": "images/icons/Boopstrap.png" }
+      ],
+      "url_proyecto": "https://prisma-virtual-classes.onrender.com",
+      "url_repositorio": "https://github.com/Xixcrod/Prisma-virtual-classes"
     }
   ],
   "skills": [
@@ -38,12 +83,67 @@
       "nombre": "JavaScript",
       "nivel": "Intermedio",
       "icono": "images/icons/javascript.png"
+    },
+    {
+      "nombre": "Php",
+      "nivel": "Intermedio",
+      "icono": "images/icons/php.png"
+    },
+    {
+      "nombre": "C++",
+      "nivel": "Intermedio",
+      "icono": "images/icons/cpp.png"
+    },
+    {
+      "nombre": "Django",
+      "nivel": "Avanzado",
+      "icono": "images/icons/django.png"
+    },
+    {
+      "nombre": "Laravel",
+      "nivel": "Principiante",
+      "icono": "images/icons/laravel.png"
+    },
+    {
+      "nombre": "Html",
+      "nivel": "Avanzado",
+      "icono": "images/icons/html.png"
+    },
+    {
+      "nombre": "Css",
+      "nivel": "intermedio",
+      "icono": "images/icons/css.png"
+    },
+    {
+      "nombre": "Bootstrap",
+      "nivel": "intermedio",
+      "icono": "images/icons/b.png"
+    },
+    {
+      "nombre": "Sqlite",
+      "nivel": "intermedio",
+      "icono": "images/icons/lite.png"
+    }, 
+    {
+      "nombre": "Postgresql",
+      "nivel": "intermedio",
+      "icono": "images/icons/postgre.png"
+    },    
+    {
+      "nombre": "Git",
+      "nivel": "Avanzado",
+      "icono": "images/icons/git.png"
+    },
+    {
+      "nombre": "VS Code",
+      "nivel": "Avanzado",
+      "icono": "images/icons/vsc.png"
     }
   ],
   "habilidades_blandas": [
     {
       "nombre": "Trabajo en Equipo",
-      "descripcion": "Colaboración efectiva, comunicación transparente y facilidad para integrarse en equipos multidisciplinarios."
+      "descripcion": "Colaboración efectiva, comunicación transparente y facilidad para integrarme en equipos multidisciplinarios."
     },
     {
       "nombre": "Resolución de Problemas",
@@ -52,6 +152,10 @@
     {
       "nombre": "Atención y Soporte al Usuario",
       "descripcion": "Empatía y habilidad para transmitir conceptos técnicos de forma clara a usuarios finales y clientes."
+    },
+        {
+      "nombre": "Autogestión y planificación de proyectos",
+      "descripcion": "Establezco metas claras, priorizando tareas críticas y autoevaluando el rendimiento para garantizar resultados de calidad."
     },
     {
       "nombre": "Adaptabilidad y Aprendizaje Continuo",
@@ -62,11 +166,11 @@
   "educacion": [
     {
       "titulo": "Ingeniería de Sistemas",
-      "institucion": "UNEFM",
-      "fecha_inicio": "2020",
-      "fecha_fin": "2025",
-      "descripcion": "Formación integral en desarrollo de software, bases de datos y arquitectura de sistemas.",
-      "certificado_pdf": "docs/titulo.pdf"
+      "institucion": "UNEFA",
+      "fecha_inicio": "2021",
+      "fecha_fin": "2026",
+      "descripcion": "Formación integral en desarrollo, diseño, implementación, optimización y mantenimiento de sistemas ",
+      "certificado_pdf": ""
     }
   ]
 }
