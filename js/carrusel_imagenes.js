@@ -15,6 +15,7 @@ function initCarrusel() {
 
         let currentIndex = 0;
         const totalImages = slideImages.length;
+        let autoplayInterval;
 
         // Si no hay imágenes o solo hay una, ocultar controles y salir
         if (totalImages <= 1) {
@@ -60,27 +61,83 @@ function initCarrusel() {
             for (let i = 0; i < totalImages; i++) {
                 const dot = document.createElement('span');
                 dot.classList.add('indicator-dot');
-                dot.addEventListener('click', () => showSlide(i));
+                dot.addEventListener('click', () => {
+                    showSlide(i);
+                    resetAutoplay();
+                });
                 indicatorsContainer.appendChild(dot);
             }
         }
 
         // Event listeners para las flechas
         if (prevButton) {
-            // Reemplazar el botón para eliminar listeners antiguos si re-inicializa
             const newPrev = prevButton.cloneNode(true);
             prevButton.parentNode.replaceChild(newPrev, prevButton);
-            newPrev.addEventListener('click', () => showSlide(currentIndex - 1));
+            newPrev.addEventListener('click', () => {
+                showSlide(currentIndex - 1);
+                resetAutoplay();
+            });
         }
 
         if (nextButton) {
             const newNext = nextButton.cloneNode(true);
             nextButton.parentNode.replaceChild(newNext, nextButton);
-            newNext.addEventListener('click', () => showSlide(currentIndex + 1));
+            newNext.addEventListener('click', () => {
+                showSlide(currentIndex + 1);
+                resetAutoplay();
+            });
         }
 
-        // Mostrar primera imagen
+        // --- AUTOPLAY (Carrusel Automático) ---
+        function startAutoplay() {
+            autoplayInterval = setInterval(() => {
+                showSlide(currentIndex + 1);
+            }, 4000); // Cambia de imagen cada 4 segundos (ajusta si prefieres otro tiempo)
+        }
+
+        function stopAutoplay() {
+            clearInterval(autoplayInterval);
+        }
+
+        function resetAutoplay() {
+            stopAutoplay();
+            startAutoplay();
+        }
+
+        // Pausar al pasar el mouse por encima (PC)
+        container.addEventListener('mouseenter', stopAutoplay);
+        container.addEventListener('mouseleave', startAutoplay);
+
+        // --- SOPORTE TÁCTIL (Swipe en Teléfonos) ---
+        let touchStartX = 0;
+        let touchEndX = 0;
+
+        container.addEventListener('touchstart', (e) => {
+            touchStartX = e.changedTouches[0].screenX;
+            stopAutoplay(); // Pausar mientras el usuario interactúa
+        }, { passive: true });
+
+        container.addEventListener('touchend', (e) => {
+            touchEndX = e.changedTouches[0].screenX;
+            handleSwipe();
+            startAutoplay(); // Reanudar autoplay al soltar
+        }, { passive: true });
+
+        function handleSwipe() {
+            const minSwipeDistance = 50; // Mínimo de píxeles para registrar el gesto
+            if (touchEndX < touchStartX - minSwipeDistance) {
+                // Deslizar a la izquierda -> Siguiente imagen
+                showSlide(currentIndex + 1);
+            }
+            if (touchEndX > touchStartX + minSwipeDistance) {
+                // Deslizar a la derecha -> Imagen anterior
+                showSlide(currentIndex - 1);
+            }
+        }
+
+        // Mostrar primera imagen e iniciar autoplay
         showSlide(0);
+        startAutoplay();
     });
 }
 
