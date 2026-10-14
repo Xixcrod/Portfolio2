@@ -1151,8 +1151,19 @@
     }
 
     .project-image-container {
-        height: 140px;
+        position: relative;
+        overflow: hidden;
+        touch-action: pan-y; /* Permite el scroll vertical de la página pero libera el gesto horizontal para el carrusel */
     }
+
+    .slide-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none; /* Crucial: evita que el navegador intente arrastrar la imagen de forma nativa en móviles */
+    user-select: none;
+    -webkit-user-drag: none;
+    }   
 
     .project-details {
         padding: 15px;

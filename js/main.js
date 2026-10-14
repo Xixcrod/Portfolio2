@@ -38,9 +38,9 @@ function renderProyectos(proyectos) {
     if (!container || !proyectos) return;
 
     container.innerHTML = proyectos.map(p => {
-        // Imágenes del carrusel
+        // Imágenes del carrusel con draggable="false" añadido
         const imgsHtml = p.imagenes && p.imagenes.length > 0 
-            ? p.imagenes.map(img => `<img src="${img}" alt="${p.titulo}" class="slide-image">`).join('')
+            ? p.imagenes.map(img => `<img src="${img}" alt="${p.titulo}" class="slide-image" draggable="false">`).join('')
             : `<div class="no-image-placeholder"><p>No hay imagen</p></div>`;
 
         // Controles de navegación del carrusel
@@ -66,7 +66,6 @@ function renderProyectos(proyectos) {
             listaCredenciales = [p.credenciales];
         }
 
-        // Renderizado con Flexbox
         const credencialesHtml = listaCredenciales.length > 0
             ? `<div class="project-credentials">
                  <p class="credentials-title">Credenciales de acceso:</p>
@@ -81,7 +80,6 @@ function renderProyectos(proyectos) {
                </div>`
             : '';
 
-        // Botones de enlace
         const btnProyecto = p.url_proyecto 
             ? `<a href="${p.url_proyecto}" class="button primary-button" target="_blank">Ver Proyecto</a>` 
             : '';
