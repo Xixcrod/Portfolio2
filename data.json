@@ -105,6 +105,11 @@
       "icono": "images/icons/laravel.png"
     },
     {
+      "nombre": "React",
+      "nivel": "Principiante",
+      "icono": "images/icons/react.png"
+    },
+    {
       "nombre": "Html",
       "nivel": "Avanzado",
       "icono": "images/icons/html.png"
