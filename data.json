@@ -14,7 +14,7 @@
   "proyectos": [
     {
       "titulo": "Registro de Notas",
-      "descripcion": "Sistema de gestión administrativa basado en la modalidad de una institución educativa de bachillerato, con funcionalidades para gestionar notas, matrículas, pensums, periodos y estudiantes por parte del personal administrativo generando incluso excel de notas. No cuenta con diseño responsivo. ",
+      "descripcion": "Sistema de gestión administrativa basado en la modalidad de una institución educativa de bachillerato, con funcionalidades para gestionar notas, matrículas, pensums, periodos y estudiantes por parte del personal administrativo generando incluso excel de notas. (No cuenta con diseño responsivo).",
       "fecha": "2022",
       "credenciales": [
         {
@@ -34,14 +34,14 @@
         { "nombre": "Python", "icono": "images/icons/python.png" },
         { "nombre": "JavaScript", "icono": "images/icons/javascript.png" },
         { "nombre": "SQLite", "icono": "images/icons/lite.png" },
-        { "nombre": "Django", "icono": "images/icons/Boopstrap.png" }
+        { "nombre": "Bootstrap", "icono": "images/icons/Boopstrap.png" }
       ],
       "url_proyecto": "https://registro-de-notas.onrender.com",
       "url_repositorio": "https://github.com/Carlos-Romero6/Registro-de-notas"
     },
     {
       "titulo": "Prisma",
-      "descripcion": "Sistema de clases virtuales para profesores y estudiantes, basado en la modalidad de trabajo de una institución universitaria contando con 3 tipos de roles (adminstrador, profesores y estudiantes), con funcionalidades para subir temas, videos, gestionar estudiantes por cursos de profesores, solicitudes de inscripción, visualizar videos, etc. No cuenta con diseño responsivo.",
+      "descripcion": "Sistema de clases virtuales para profesores y estudiantes, basado en la modalidad de trabajo de una institución universitaria contando con 3 tipos de roles (adminstrador, profesores y estudiantes), con funcionalidades para subir temas, videos, gestionar estudiantes por cursos de profesores, solicitudes de inscripción, visualizar videos, etc. (No cuenta con diseño responsivo).",
       "fecha": "2025",
       "credenciales": [
       {
@@ -67,10 +67,43 @@
         { "nombre": "Python", "icono": "images/icons/python.png" },
         { "nombre": "JavaScript", "icono": "images/icons/javascript.png" },
         { "nombre": "Postgresql", "icono": "images/icons/postgre.png" },
-        { "nombre": "Django", "icono": "images/icons/Boopstrap.png" }
+        { "nombre": "Bootstrap", "icono": "images/icons/Boopstrap.png" }
       ],
       "url_proyecto": "https://prisma-virtual-classes.onrender.com",
       "url_repositorio": "https://github.com/Xixcrod/Prisma-virtual-classes"
+    },
+        {
+      "titulo": "Gecom",
+      "descripcion": "Plataforma web de gestión administrativa diseñada para optimizar el registro, resguardo, control y seguimiento de expedientes, brigadas, proyectos y asesores dentro de una Coordinación de Servicio Comunitario de una universidad. (No cuenta con diseño responsivo).",
+      "fecha": "2026",
+      "credenciales": [
+      {
+        "usuario": "12345678",
+        "password": "usuario12345"
+      }
+      ],
+      "imagenes": [
+        "images/proyectos/gecom1.png",
+        "images/proyectos/gecom2.png",
+        "images/proyectos/gecom3.png",
+        "images/proyectos/gecom4.png",
+        "images/proyectos/gecom5.png",
+        "images/proyectos/gecom6.png",
+        "images/proyectos/gecom7.png",
+        "images/proyectos/gecom8.png",
+        "images/proyectos/gecom9.png",
+        "images/proyectos/gecom10.png",
+        "images/proyectos/gecom11.png"
+      ],
+      "tecnologias": [
+        { "nombre": "Django", "icono": "images/icons/django.png" },
+        { "nombre": "Python", "icono": "images/icons/python.png" },
+        { "nombre": "JavaScript", "icono": "images/icons/javascript.png" },
+        { "nombre": "Postgresql", "icono": "images/icons/postgre.png" },
+        { "nombre": "Tailwind CSS", "icono": "images/icons/tailwind.png" }
+      ],
+      "url_proyecto": "https://gecom-0ywu.onrender.com",
+      "url_repositorio": "https://github.com/Xixcrod/gecom"
     }
   ],
   "skills": [
@@ -123,6 +156,11 @@
       "nombre": "Bootstrap",
       "nivel": "intermedio",
       "icono": "images/icons/b.png"
+    },
+    {
+      "nombre": "Tailwind CSS",
+      "nivel": "principiante",
+      "icono": "images/icons/tailwind.png"
     },
     {
       "nombre": "Sqlite",
